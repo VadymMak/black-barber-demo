@@ -1,26 +1,28 @@
 :root {
   /* Theme colors — overridden by DB themeConfig via layout.tsx */
-  --color-bg: #F5F0EA;
+  --color-bg: #0D0D0D;
   --color-primary: #C96030;
   --color-primary-dark: #A04820;
-  --color-primary-light: #F5E6DC;
-  --color-text: #141414;
-  --color-text-secondary: #6B6560;
-  --color-text-muted: #8A7F7A;
-  --color-border: #E8E2DA;
-  --color-bg-subtle: #EDE8E0;
-  --color-secondary: #8B4513;
+  --color-primary-light: rgba(201, 96, 48, 0.15);
+  --color-text: #F0EBE3;
+  --color-text-secondary: #A09A94;
+  --color-text-muted: #6B6B6B;
+  --color-border: #2A2A2A;
+  --color-bg-subtle: #1A1A1A;
+  --color-secondary: #1A1A1A;
+  --color-muted: #6B6B6B;
+  --color-surface: #141414;
   --color-success: #16a34a;
   --color-error: #ef4444;
   --color-contrast: #ffffff;
-  --color-overlay: #141414;
-  --color-overlay-alpha: rgba(20,20,20,0.65);
-  --color-header-bg: rgba(245,240,234,0.92);
+  --color-overlay: #0D0D0D;
+  --color-overlay-alpha: rgba(0,0,0,0.75);
+  --color-header-bg: rgba(13,13,13,0.92);
   --color-bg-dark: #141414;
   --color-warning: #fbbf24;
-  --color-success-light: #dcfce7;
-  --color-error-light: #fef2f2;
-  --color-info-light: #F5E6DC;
+  --color-success-light: rgba(22, 163, 74, 0.15);
+  --color-error-light: rgba(239, 68, 68, 0.15);
+  --color-info-light: rgba(201, 96, 48, 0.12);
 
   /* Layout — border radius (default: rounded) */
   --radius-xs: 4px;
@@ -30,9 +32,9 @@
   --radius-xl: 16px;
 
   /* Layout — card style (default: shadow) */
-  --card-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
-  --card-shadow-hover: 0 12px 28px rgba(17,24,39,0.12);
-  --card-border: 1px solid transparent;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.3);
+  --card-shadow-hover: 0 12px 28px rgba(0,0,0,0.5);
+  --card-border: 1px solid var(--color-border);
 }
 
 *,
@@ -72,6 +74,8 @@ body {
 
 h1, h2, h3 {
   font-family: var(--font-heading), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 button {
@@ -88,22 +92,22 @@ body::before {
   background:
     radial-gradient(
       ellipse 600px 500px at 15% 20%,
-      rgba(201, 96, 48, 0.06) 0%,
+      rgba(201, 96, 48, 0.08) 0%,
       transparent 70%
     ),
     radial-gradient(
       ellipse 500px 600px at 85% 45%,
-      rgba(160, 72, 32, 0.04) 0%,
+      rgba(160, 72, 32, 0.06) 0%,
       transparent 65%
     ),
     radial-gradient(
       ellipse 700px 400px at 30% 80%,
-      rgba(201, 96, 48, 0.05) 0%,
+      rgba(201, 96, 48, 0.07) 0%,
       transparent 60%
     ),
     radial-gradient(
       ellipse 400px 400px at 60% 60%,
-      rgba(232, 226, 218, 0.18) 0%,
+      rgba(201, 96, 48, 0.04) 0%,
       transparent 50%
     );
 }

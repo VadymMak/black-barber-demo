@@ -81,10 +81,13 @@
   display: inline-flex;
   align-items: center;
   padding: 0.875rem 2rem;
-  background: var(--color-primary-dark);
+  background: var(--color-primary);
   color: var(--color-contrast);
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-family: var(--font-heading), sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   border-radius: 6px;
   text-decoration: none;
   transition: background 0.2s ease;

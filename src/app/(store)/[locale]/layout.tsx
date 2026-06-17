@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
-import { Oswald, Inter } from 'next/font/google';
+import { Bebas_Neue, Inter } from 'next/font/google';
 import { routing, type Locale } from '@/i18n/routing';
 import Header from '@/components/layout/Header/Header';
 import Footer from '@/components/layout/Footer/Footer';
@@ -17,9 +17,9 @@ import '../../globals.css';
 
 export const dynamic = 'force-dynamic';
 
-const oswald = Oswald({
-  subsets: ['latin', 'latin-ext'],
-  weight: ['600', '700'],
+const bebasNeue = Bebas_Neue({
+  weight: '400',
+  subsets: ['latin'],
   variable: '--font-heading',
 });
 
@@ -110,7 +110,7 @@ export default async function LocaleLayout({
     : undefined;
 
   return (
-    <html lang={locale} data-vertical={config.vertical.vertical} className={`${oswald.variable} ${inter.variable}`}>
+    <html lang={locale} data-vertical={config.vertical.vertical} className={`${bebasNeue.variable} ${inter.variable}`}>
       <body style={cssVars as React.CSSProperties}>
         <NextIntlClientProvider messages={messages}>
           <CustomerProvider>
