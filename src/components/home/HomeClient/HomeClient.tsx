@@ -90,7 +90,7 @@ export default function HomeClient({
               <HeroSection
                 key={section}
                 storeName={storeName}
-                heroImage="/hero-emmerka.webp"
+                heroImage="/hero-barbershop.webp"
                 heroImageMobile={heroImageMobile}
                 dailySpecial={
                   fullProducts[0]

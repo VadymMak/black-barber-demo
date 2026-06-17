@@ -149,7 +149,7 @@ export default function AdminSettingsPage() {
   // Payment
   const [payment, setPayment] = useState({ wayforpayOn: false, wfpMerchant: '', wfpSecret: '', wfpTest: false, liqpayOn: false, liqPublic: '', liqPrivate: '', codOn: true, codFee: '0' });
   // Notifications
-  const [notif, setNotif] = useState({ emailOn: true, email: 'info@emmerka.sk', reviewsOn: true, lowStockOn: true, telegramOn: false, botToken: '', chatId: '' });
+  const [notif, setNotif] = useState({ emailOn: true, email: 'info@katebarber.sk', reviewsOn: true, lowStockOn: true, telegramOn: false, botToken: '', chatId: '' });
   // Security
   const [security, setSecurity] = useState({ currentPw: '', newPw: '', confirmPw: '', twoFactor: false });
 

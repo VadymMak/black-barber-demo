@@ -11,25 +11,28 @@ const db = new PrismaClient({ adapter });
 const categoryData = [
   { slug: 'haircut',    nameKey: 'Haircut',    sortOrder: 1 },
   { slug: 'beard',      nameKey: 'Beard',      sortOrder: 2 },
-  { slug: 'styling',    nameKey: 'Styling',    sortOrder: 3 },
+  { slug: 'combos',     nameKey: 'Combos',     sortOrder: 3 },
+  { slug: 'styling',    nameKey: 'Styling',    sortOrder: 4 },
 ];
 
 const products = [
   // ── HAIRCUT ──
-  { slug: 'classic-cut',   nameKey: 'Classic Cut',   price: 25, category: 'haircut', metadata: { portionSize: '45min', cookTime: 45 } },
-  { slug: 'layered-cut',   nameKey: 'Layered Cut',   price: 35, category: 'haircut', isHit: true, metadata: { portionSize: '55min', cookTime: 55 } },
-  { slug: 'fade-cut',      nameKey: 'Fade Cut',      price: 30, category: 'haircut', metadata: { portionSize: '50min', cookTime: 50 } },
-  { slug: 'buzz-cut',      nameKey: 'Buzz Cut',      price: 20, category: 'haircut', metadata: { portionSize: '30min', cookTime: 30 } },
+  { slug: 'classic-cut',    nameKey: 'Haircut',          price: 15, category: 'haircut', isHit: true, metadata: { duration: '30min', description: { en: 'Classic scissor & clipper cut, styled to perfection.' } } },
+  { slug: 'fade-cut',       nameKey: 'Fade Haircut',     price: 18, category: 'haircut',              metadata: { duration: '35min', description: { en: 'Skin or low fade with sharp lines.' } } },
+  { slug: 'kids-cut',       nameKey: "Kid's Haircut",    price: 10, category: 'haircut', isNew: true, metadata: { duration: '20min', description: { en: 'Haircut for children up to 12 years.' } } },
 
   // ── BEARD ──
-  { slug: 'beard-trim',  nameKey: 'Beard Trim',  price: 15, category: 'beard', metadata: { portionSize: '30min', cookTime: 30 } },
-  { slug: 'full-shave',  nameKey: 'Full Shave',  price: 25, category: 'beard', isHit: true, metadata: { portionSize: '40min', cookTime: 40 } },
-  { slug: 'beard-shape', nameKey: 'Beard Shape', price: 20, category: 'beard', metadata: { portionSize: '35min', cookTime: 35 } },
+  { slug: 'beard-trim',     nameKey: 'Beard Trim',       price: 10, category: 'beard',               metadata: { duration: '20min', description: { en: 'Trimming, shaping and conditioning.' } } },
+  { slug: 'hot-towel-shave',nameKey: 'Hot Towel Shave',  price: 14, category: 'beard',  isHit: true, metadata: { duration: '30min', description: { en: 'Traditional straight-razor shave with hot towel.' } } },
+  { slug: 'beard-lineup',   nameKey: 'Beard Line-Up',    price: 8,  category: 'beard',               metadata: { duration: '15min', description: { en: 'Crisp edge-up for beard & neckline.' } } },
+
+  // ── COMBOS ──
+  { slug: 'hair-and-beard', nameKey: 'Hair + Beard',     price: 22, category: 'combos', isHit: true, metadata: { duration: '50min', description: { en: 'Full haircut combined with beard trim — best value.' } } },
+  { slug: 'fade-and-shave', nameKey: 'Fade + Hot Shave', price: 28, category: 'combos',              metadata: { duration: '60min', description: { en: 'Fade cut paired with a classic hot towel shave.' } } },
 
   // ── STYLING ──
-  { slug: 'blowout',  nameKey: 'Blowout',  price: 20, category: 'styling', metadata: { portionSize: '30min', cookTime: 30 } },
-  { slug: 'updo',     nameKey: 'Updo',     price: 30, category: 'styling', metadata: { portionSize: '45min', cookTime: 45 } },
-  { slug: 'hair-treatment', nameKey: 'Hair Treatment', price: 40, category: 'styling', isNew: true, metadata: { portionSize: '60min', cookTime: 60 } },
+  { slug: 'styling',        nameKey: 'Styling',          price: 12, category: 'styling',             metadata: { duration: '15min', description: { en: 'Blow-dry finish and product styling.' } } },
+  { slug: 'hair-treatment', nameKey: 'Hair Treatment',   price: 16, category: 'styling', isNew: true, metadata: { duration: '20min', description: { en: 'Deep conditioning mask for healthy hair.' } } },
 ];
 
 const chairs = [

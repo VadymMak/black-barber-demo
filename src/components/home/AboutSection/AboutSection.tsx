@@ -37,8 +37,8 @@ export default function AboutSection() {
         <ScrollReveal animation="fadeRight" delay={200}>
         <div className={styles.imageWrap}>
           <Image
-            src="/about-emmerka.webp"
-            alt="Šéfkuchárka pripravuje tortu v kaviarni Emmerka"
+            src="/about-barbershop.webp"
+            alt="Barber at work in Kate Barber Studio"
             fill
             className={styles.aboutImage}
             sizes="(max-width: 768px) 100vw, 50vw"

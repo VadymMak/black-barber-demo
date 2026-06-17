@@ -9,6 +9,7 @@
   --color-text-muted: #8A7F7A;
   --color-border: #E8E2DA;
   --color-bg-subtle: #EDE8E0;
+  --color-secondary: #8B4513;
   --color-success: #16a34a;
   --color-error: #ef4444;
   --color-contrast: #ffffff;
@@ -67,6 +68,10 @@ body {
   -webkit-font-smoothing: antialiased;
   color: var(--color-text);
   background: var(--color-bg);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading), sans-serif;
 }
 
 button {

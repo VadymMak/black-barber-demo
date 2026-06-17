@@ -1,5 +1,5 @@
 {
-  "name": "emmerka-restaurant",
+  "name": "kate-barber-demo",
   "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@9.12.0",
@@ -15,7 +15,7 @@
     "start": "next start",
     "lint": "next lint",
     "clean": "powershell -Command \"Remove-Item -Recurse -Force .next -ErrorAction SilentlyContinue\"",
-    "seed:emmerka": "npx tsx prisma/seed-emmerka.ts"
+    "seed:kate-barber": "npx tsx prisma/seed-kate-barber.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",

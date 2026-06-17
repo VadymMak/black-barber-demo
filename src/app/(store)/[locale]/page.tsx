@@ -7,7 +7,7 @@ import { getBaseUrl } from '@/lib/url';
 
 export const revalidate = 3600;
 
-const STORE_SLUG = process.env.STORE_SLUG ?? 'emmerka';
+const STORE_SLUG = process.env.STORE_SLUG ?? 'kate-barber';
 
 const getHitProducts = unstable_cache(
   (storeId: string) =>
@@ -108,7 +108,7 @@ export default async function HomePage({
   const baseUrl = getBaseUrl();
   const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Restaurant',
+    '@type': 'LocalBusiness',
     name: store.name,
     url: `${baseUrl}/${locale}`,
     address: store.address ? { '@type': 'PostalAddress', streetAddress: store.address } : undefined,
@@ -126,7 +126,7 @@ export default async function HomePage({
         dailySpecials={dailySpecials.length > 0 ? dailySpecials : undefined}
         testimonials={testimonialItems}
         testimonialsCount={testimonialsCount}
-        heroImageMobile="/hero-emmerka-mobile.webp"
+        heroImageMobile="/hero-barbershop-mobile.webp"
       />
     </>
   );
