@@ -15,6 +15,8 @@ import { CustomerProvider } from '@/lib/useCustomer';
 import { getBaseUrl } from '@/lib/url';
 import '../../globals.css';
 
+export const dynamic = 'force-dynamic';
+
 const oswald = Oswald({
   subsets: ['latin', 'latin-ext'],
   weight: ['600', '700'],
@@ -75,9 +77,6 @@ export const viewport: Viewport = {
     { media: '(prefers-color-scheme: dark)', color: '#141414' },
   ],
 };
-
-// Re-check DB every 60 seconds (ISR)
-export const revalidate = 60;
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
